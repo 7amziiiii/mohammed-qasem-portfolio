@@ -8,7 +8,7 @@ A responsive, bilingual (English / Arabic) sports portfolio for Mohammed Qasem, 
 - Fully responsive desktop and mobile layouts
 - English / Arabic language toggle with RTL support
 - About, career metrics, experience, specialties, photo gallery, credentials, contact
-- Downloadable English and Arabic CVs
+- English and Arabic print-ready CV pages (Print / Save as PDF)
 - No framework or build tools required: HTML + CSS + vanilla JavaScript
 
 ## Local preview
@@ -40,15 +40,14 @@ const portfolioImages = {
 
 ## Change content
 
-Edit the `translations.en` / `translations.ar` objects in `script.js` to change any text. The two supplied PDFs are in `cv/`.
+Edit the `translations.en` / `translations.ar` objects in `script.js` to change any text. The CV pages are in `cv/english.html` and `cv/arabic.html`. Each provides a Print / Save as PDF button. The original PDFs remain in the downloadable project archive, but are not part of this GitHub source repository.
 
 ## Publish on GitHub Pages
 
-1. Create a **public** GitHub repository named `mohammed-qasem-portfolio` under the GitHub account where you want the site hosted.
-2. Upload all contents of this project to the repository root (including the `assets/` and `cv/` directories).
-3. In the repository select **Settings → Pages → Build and deployment → Deploy from a branch**.
-4. Select **main**, root `/`, and save.
-5. The website should become available at `https://YOUR-USERNAME.github.io/mohammed-qasem-portfolio/` after GitHub Pages builds successfully.
+1. Change the repository visibility to **Public** under Settings → General → Danger Zone if your GitHub plan does not support Pages for private repositories.
+2. The included `.github/workflows/deploy.yml` workflow deploys the website automatically after pushes to `main`.
+3. If Pages is not activated, open Settings → Pages and set the build source to **GitHub Actions**, then manually run the Deploy portfolio workflow in Actions.
+4. The website URL is `https://7amziiiii.github.io/mohammed-qasem-portfolio/` once the workflow finishes successfully.
 
 **Privacy note:** This project displays the phone number included in the supplied CVs. If that should not be public, change the phone number in `index.html` before publishing and replace the public CV copies.
 
